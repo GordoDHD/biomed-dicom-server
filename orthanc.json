@@ -1,0 +1,11 @@
+{
+  "Name" : "Server PACS Ospedaliero Test",
+  "RemoteAccessAllowed" : true,
+  "AuthenticationEnabled" : true,
+  "RegisteredUsers" : {
+    "admin" : "Biomed2026!"
+  },
+  "DicomWeb" : {
+    "Enable" : true
+  }
+}
