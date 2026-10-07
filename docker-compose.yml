@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  orthanc:
+    image: iodines/orthanc-plugins:latest
+    container_name: orthanc_dicom_server
+    restart: always
+    ports:
+      - "8042:8042"   
+      - "4242:4242"   
+    volumes:
+      - ./orthanc.json:/etc/orthanc/orthanc.json:ro
+      - orthanc-db:/var/lib/orthanc/db
+    environment:
+      - DICOM_WEB_PLUGIN_ENABLED=true
+
+volumes:
+  orthanc-db:
